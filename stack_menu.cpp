@@ -62,7 +62,7 @@ while(1)
 	Stack * s = new Stack(100);
 	int choice, num;
 	main:
-		system("pause>0");
+		
 		system("cls");
 	menu();
 	cout <<"Enter choice: ";
@@ -103,6 +103,6 @@ while(1)
 		goto main;
 	
 
-	return 0;
+	return 1;
 }
 }
