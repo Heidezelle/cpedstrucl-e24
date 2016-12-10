@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 using namespace std;
 
 class Stack {
@@ -43,7 +44,6 @@ class Stack {
   int maxelem;
 };
 
-
 void menu(){
 	cout << "What would you like to do?: \n";
 	cout << "1: Push \n";
@@ -53,56 +53,41 @@ void menu(){
 	
 }
 
-
-
-int main(){
-while(1)
-{
-		
-	Stack * s = new Stack(100);
-	int choice, num;
-	main:
-		
-		system("cls");
-	menu();
-	cout <<"Enter choice: ";
-	cin >> choice;
-	
-	if(choice == 1)
-	{
-		system("pause>0");
-		system("cls");
-		cout <<"Enter num: ";
-		cin >>num;
-		s -> push(num);
-		goto main;
+int main() {
+  int choice,num;
+  Stack * s = new Stack(100);
+  while(1){
+  system("cls");
+  menu();
+  cin >> choice;
+  switch (choice){
+  	case 1:{
+  		cout<< "Enter number: ";
+  		cin>> num;
+  		s->push(num);
+  		getch();
+		break;
+	  }
+	case 2:{
+		s->pop();
+		getch();
+		break;
 	}
-	
-	else if(choice == 2)
-	{
-		system("pause>0");
-		system("cls");
-		
-		s -> pop();
-		
+	case 3:{
+		s->display();
+		getch();
+		break;
 	}
-	else if(choice == 3)
-	{
-		system("pause>0");
-		system("cls");
-		s ->display();
-	}
-
-	else if(choice == 4)
-	{
+	case 4:{
 		exit(1);
+		break;
 	}
-	
-	else
-		cout <<"invalid";
-		goto main;
-	
-
-	return 1;
-}
+	default:{
+		cout<<"Invalid input";
+		getch();
+		break;
+	}
+  }
+  }
+  return 1;
 }
