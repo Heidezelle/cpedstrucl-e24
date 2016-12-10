@@ -11,14 +11,14 @@ class Stack {
     }
     
   void push(int t) {
-  	cout << "Push "<<t<<": \n";
+  	cout << "Push: "<<t<<" \n";
     if (top == maxelem) 
 		return;
     s[top++] = t;
   }
   
   int pop() {
-  	cout << "Pop: \n";
+  	cout << "Pop \n";
     if (top == 0) 
 		return -1;
     return s[--top];
@@ -57,12 +57,15 @@ int main() {
   int choice,num;
   Stack * s = new Stack(100);
   while(1)
-  {
+{
   system("cls");
   menu();
+  cout <<"Enter your choice: ";
   cin >> choice;
   switch (choice){
   	case 1:{
+  		
+  		system("cls");
   		cout<< "Enter number: ";
   		cin>> num;
   		s->push(num);
@@ -70,11 +73,15 @@ int main() {
 		break;
 	  }
 	case 2:{
+		
+  		system("cls");
 		s->pop();
 		getch();
 		break;
 	}
 	case 3:{
+		system("pause>0");
+  		system("cls");
 		s->display();
 		getch();
 		break;
