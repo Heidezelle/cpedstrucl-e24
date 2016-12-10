@@ -56,7 +56,8 @@ void menu(){
 int main() {
   int choice,num;
   Stack * s = new Stack(100);
-  while(1){
+  while(1)
+  {
   system("cls");
   menu();
   cin >> choice;
@@ -88,6 +89,6 @@ int main() {
 		break;
 	}
   }
-  }
+ }
   return 1;
 }
