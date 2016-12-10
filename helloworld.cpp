@@ -4,7 +4,7 @@ using namespace std;
 int main(){
 	
 	cout <<"Hello World!";
-	cout <<"cpe datastruct";
+	cout <<"cpe datastructl";
 	
 	return 0;
 }
